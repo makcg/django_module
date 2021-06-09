@@ -1,0 +1,93 @@
+{% extends 'product/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-6" style="margin-top: 10px;">
+        <form id="form">
+            <div id="user-info">
+                <div class="form-field" style="width: 250px;
+display: inline-block;
+padding: 5px;">
+                    <input required class="form-control" type="text"
+                           name="name" placeholder="Name..">
+                </div>
+                <div class="form-field" style="width: 250px;
+display: inline-block;
+padding: 5px;">
+                    <input required class="form-control" type="email"
+                           name="email" placeholder="Email..">
+                </div>
+
+            </div>
+            <div id="shipping-info">
+                <hr>
+                <p>Shipping Information</p>
+                <hr>
+                <div class="form-field" style="width: 250px;
+display: inline-block;
+padding: 5px;">
+                    <input class="form-control" type="text" name="address" placeholder="City..">
+
+                </div>
+                <div class="form-field" style="width: 250px;
+display: inline-block;
+padding: 5px;">
+                    <input class="form-control" type="text" name="state" placeholder="State..">
+                </div>
+            </div>
+            <div class="form-field" style="width: 250px;
+display: inline-block;
+padding: 5px;">
+                <input class="form-control" type="text" name="zipcode" placeholder="Zip Code..">
+            </div>
+            <div class="form-field" style="width: 250px;
+display: inline-block;
+padding: 5px;">
+                <input class="form-control" type="text" name="country" placeholder="Zip Code..">
+            </div>
+            <hr>
+                <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+            </form>
+        <div class="box-element hidden" style="box-shadow:hs1(0, 0%, 80%) 0 0 16px;
+    background-color:#fff;
+    border-radius; 4px;
+    padding; 10px; display: none!important;" id="payment-info">
+            <small>Paypal Options</small>
+        </div>
+        </div>
+    <div class="col-lg-6" style="margin-top: 30px;">
+        <div class="box-element" style="box-shadow:hs1(0, 0%, 80%) 0 0 30px;
+    background-color:#fff;
+    border-radius; 4px;
+    padding; 30px;">
+            <a href="{% url 'card' %}">&#x2190;
+            Back to Card></a>
+
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+
+            <div class="cart-row" style="display: flex;
+  align-items: flex-stretch;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+    border-bottom: 1px;
+     solid #ececec;">
+
+                <div style="flex:2"><img class="row-image" style="width: 100px;" src="{% static 'img.Samorez.jpg' %}"></div>
+                <div style="flex:2"> <p>Product 1</p></div>
+                <div style="flex:1"> <p>$20</p></div>
+                <div style="flex:1"> <p>x2</p></div>
+            </div>
+            <div>
+                <h5>Items: 2</h5>
+                <h5>Total: 40</h5>
+            </div>
+        </div>
+    </div>
+
+    </div>
+<div class="row"></div>
+
+{% endblock %}
